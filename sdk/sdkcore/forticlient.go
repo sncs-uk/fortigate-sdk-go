@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/auth"
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/config"
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/request"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/auth"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/config"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/request"
 	// "strconv"
 )
 

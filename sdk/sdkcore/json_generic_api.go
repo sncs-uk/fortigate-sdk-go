@@ -8,7 +8,7 @@ import (
 	"log"
 	"log/slog"
 
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/request"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/request"
 )
 
 // JSONJSONGenericAPI contains the parameters for Create API function

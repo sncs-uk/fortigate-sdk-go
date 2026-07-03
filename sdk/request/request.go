@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/config"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/config"
 )
 
 // Request describes the request to FortiOS service

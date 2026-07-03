@@ -3,7 +3,7 @@ package config
 import (
 	"net/http"
 
-	"github.com/sncs-uk/fortigate-lb-controller/sdk/auth"
+	"github.com/sncs-uk/fortigate-sdk-go/sdk/auth"
 )
 
 // Config provides configuration to a FortiOS client instance
