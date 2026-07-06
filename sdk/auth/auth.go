@@ -194,7 +194,7 @@ func (m *Auth) GetEnvHTTPProxy() (string, error) {
 
 	m.HTTPProxy = c
 	if c == "" {
-		slog.Info("Did not find environment variable for HTTPS_PROXY or HTTP_PROXY!")
+		slog.Debug("Did not find environment variable for HTTPS_PROXY or HTTP_PROXY!")
 	}
 
 	return c, nil
