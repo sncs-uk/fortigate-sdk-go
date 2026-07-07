@@ -162,7 +162,7 @@ func (c *FortiSDKClient) CreateFirewallObjectVip(params *JSONFirewallObjectVip) 
 	var result map[string]interface{}
 	json.Unmarshal([]byte(string(body)), &result)
 
-	log.Printf("FOS-fortios response: %v", result)
+	slog.Debug("FOS-fortios reading response", slog.Any("body", string(body)))
 
 	err = fortiAPIErrorFormat(result, string(body))
 
