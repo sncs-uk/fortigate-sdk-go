@@ -11,15 +11,15 @@ import (
 
 // JSONFirewallObjectVip contains the parameters for Create and Update API function
 type JSONFirewallObjectVip6 struct {
-	Name        string        `json:"name"`
-	Comment     string        `json:"comment"`
-	Extip       string        `json:"extip"`
-	Mappedip    VIPMultValues `json:"mappedip"`
-	Extintf     string        `json:"extintf,omitempty"`
-	Portforward string        `json:"portforward,omitempty"`
-	Protocol    string        `json:"protocol,omitempty"`
-	Extport     string        `json:"extport,omitempty"`
-	Mappedport  string        `json:"mappedport,omitempty"`
+	Name        string `json:"name"`
+	Comment     string `json:"comment"`
+	Extip       string `json:"extip"`
+	Mappedip    string `json:"mappedip"`
+	Extintf     string `json:"extintf,omitempty"`
+	Portforward string `json:"portforward,omitempty"`
+	Protocol    string `json:"protocol,omitempty"`
+	Extport     string `json:"extport,omitempty"`
+	Mappedport  string `json:"mappedport,omitempty"`
 }
 
 // JSONCreateFirewallObjectVipOutput contains the output results for Create API function
@@ -87,18 +87,7 @@ func (c *FortiSDKClient) ListFirewallObjectVip6() (output []*JSONFirewallObjectV
 			vip.Extip = mapTmp["extip"].(string)
 		}
 		if mapTmp["mappedip"] != nil {
-			member := mapTmp["mappedip"].([]interface{})
-
-			var members []VIPMultValue
-			for _, v := range member {
-				c := v.(map[string]interface{})
-
-				members = append(members,
-					VIPMultValue{
-						Range: c["range"].(string),
-					})
-			}
-			vip.Mappedip = members
+			vip.Mappedip = mapTmp["mappedip"].(string)
 		}
 		if mapTmp["extintf"] != nil {
 			vip.Extintf = mapTmp["extintf"].(string)
