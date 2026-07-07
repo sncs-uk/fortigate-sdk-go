@@ -301,18 +301,7 @@ func (c *FortiSDKClient) ReadFirewallObjectVip6(mkey string) (output *JSONFirewa
 			output.Extip = mapTmp["extip"].(string)
 		}
 		if mapTmp["mappedip"] != nil {
-			member := mapTmp["mappedip"].([]interface{})
-
-			var members []VIPMultValue
-			for _, v := range member {
-				c := v.(map[string]interface{})
-
-				members = append(members,
-					VIPMultValue{
-						Range: c["range"].(string),
-					})
-			}
-			output.Mappedip = members
+			output.Mappedip = mapTmp["mappedip"].(string)
 		}
 		if mapTmp["extintf"] != nil {
 			output.Extintf = mapTmp["extintf"].(string)
