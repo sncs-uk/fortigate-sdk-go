@@ -125,7 +125,7 @@ func (c *FortiSDKClient) ListFirewallObjectVip6() (output []*JSONFirewallObjectV
 // Returns the index value of the firewall virtual IP and execution result when the request executes successfully.
 // Returns error for service API and SDK errors.
 // See the firewall - vip chapter in the FortiOS Handbook - CLI Reference.
-func (c *FortiSDKClient) CreateFirewallObjectVip6(params *JSONFirewallObjectVip) (output *JSONCreateFirewallObjectVip6Output, err error) {
+func (c *FortiSDKClient) CreateFirewallObjectVip6(params *JSONFirewallObjectVip6) (output *JSONCreateFirewallObjectVip6Output, err error) {
 	HTTPMethod := "POST"
 	path := "/api/v2/cmdb/firewall/vip6"
 	output = &JSONCreateFirewallObjectVip6Output{}
@@ -178,7 +178,7 @@ func (c *FortiSDKClient) CreateFirewallObjectVip6(params *JSONFirewallObjectVip)
 // Returns the index value of the firewall virtual IP and execution result when the request executes successfully.
 // Returns error for service API and SDK errors.
 // See the firewall - vip chapter in the FortiOS Handbook - CLI Reference.
-func (c *FortiSDKClient) UpdateFirewallObjectVip6(params *JSONFirewallObjectVip, mkey string) (output *JSONUpdateFirewallObjectVip6Output, err error) {
+func (c *FortiSDKClient) UpdateFirewallObjectVip6(params *JSONFirewallObjectVip6, mkey string) (output *JSONUpdateFirewallObjectVip6Output, err error) {
 	HTTPMethod := "PUT"
 	path := "/api/v2/cmdb/firewall/vip6"
 	path += "/" + EscapeURLString(mkey)
